@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Todo App</h1>
+    <div class="auth-buttons" id="auth-buttons">
+      <button id="login-btn" class="btn btn-outline" type="button">Login</button>
+      <button id="signup-btn" class="btn btn-primary" type="button">Signup</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="todo-card">
+      <div class="card-head">
+        <h2>My Tasks</h2>
+        <span id="task-meta" class="task-meta">0 tasks</span>
+      </div>
+      <p id="auth-status" class="auth-status">You are not logged in.</p>
+      <form id="todo-form" class="todo-form">
+        <input id="todo-input" type="text" placeholder="Add a new task..." autocomplete="off" required />
+        <button class="btn btn-primary" type="submit">Add</button>
+      </form>
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+  </main>
+
+  <div id="auth-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <h3 id="modal-title">Auth</h3>
+      <form id="auth-form" class="auth-form">
+        <input id="auth-username" type="text" placeholder="Username" autocomplete="off" required />
+        <input id="auth-email" class="signup-only hidden" type="email" placeholder="Email" autocomplete="off" />
+        <input id="auth-password" type="password" placeholder="Password" required />
+        <button id="auth-submit" class="btn btn-primary" type="submit">Submit</button>
+      </form>
+      <button id="close-modal" class="btn btn-outline" type="button">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
